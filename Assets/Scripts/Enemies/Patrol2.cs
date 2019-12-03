@@ -59,6 +59,7 @@ public class Patrol2 : MonoBehaviour
         }
         else if (trig.tag == "Player")
         {
+            animator.SetTrigger("Attack");
             player.Damage();
             playerHit = true;
         }

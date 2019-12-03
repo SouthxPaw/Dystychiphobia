@@ -127,7 +127,7 @@ PrefabInstance:
     - target: {fileID: 1011144127770623323, guid: 5cce35e3104bf47cc9309397c88fe9e5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1011144127770623301, guid: 5cce35e3104bf47cc9309397c88fe9e5,
         type: 3}
@@ -680,16 +680,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - So... let me guess? You got lost in the forest and found a door right? HA! That
-      never gets old. Anything you wanna ask me?
-    - No? It's okay, you don't have to say anything, the silent protaganist trope
-      never gets old. Tale as old as time, right?
-    - Anyways, you're here to play a game, MY GAME, whether you like it, know it,
-      or have no idea what is going on.
-    - "Think of me as like a..... like a uhhh....\r\n\r\nguide? Yeah that sounds right."
-    - Still confused? That's okay too. Get to smashing through these doors and everything
-      should start to make a little more sense. Or not. Who knows?
-    - Have fun, kid. You never know what you'll have to face out there.
+    - You're a lot tougher than look kid. I'll just say I wasn't expecting you, out
+      of everyone to be making it this far.
+    - Now, I'm serious when I say this is going to get more difficult for ya.
+    - Remember my offer earlier, when I said you could just give up?
+    - Well yeah. That's still on the table and honestly, I wouldn't be mad if you
+      decided to do just that.
+    - Believe me when I say you're making my job A LOT more difficult than it needs
+      to be by doing what you're doin.
+    - Still giving me the silent treatment...
+    - That's okay. Just continue forward.
 --- !u!1 &356697416
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,7 +758,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Hey kid, why don't you click and have a chat with me.\r\nBefore ya go ahead.\r\n"
+  m_Text: I'm cool, calm, and collected. Click. It.
 --- !u!222 &356697419
 CanvasRenderer:
   m_ObjectHideFlags: 0

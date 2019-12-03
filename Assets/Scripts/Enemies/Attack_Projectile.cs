@@ -18,8 +18,8 @@ public class Attack_Projectile : MonoBehaviour
         //translate laser to left
         transform.Translate(Vector3.left * _speed * Time.deltaTime);
 
-        //if attack particle is less than -14.23 then destroy the particle on the x
-        if (transform.position.x < -14.22)
+        //if attack particle is less than -50 then destroy the particle on the x
+        if (transform.position.x < -50)
         {
             //check if this object has a parent
             //destory parent object too
@@ -43,6 +43,13 @@ public class Attack_Projectile : MonoBehaviour
             {
                 player.Damage();
             }
+        } else if (other.tag == "End")
+        {
+            if (transform.parent != null)
+            {
+                Destroy(transform.parent.gameObject);
+            }
+            Destroy(this.gameObject);
         }
     }
 }

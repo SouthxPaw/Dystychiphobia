@@ -29,6 +29,10 @@ public class Patrol3 : MonoBehaviour
             Debug.Log("Player is null");
         }
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        if (target == null)
+        {
+            Debug.Log("Target is null");
+        }
         originalPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
     }
 
@@ -111,6 +115,7 @@ public class Patrol3 : MonoBehaviour
         }
         else if (trig.tag == "Player")
         {
+            animator.SetTrigger("Attack");
             player.Damage();
             playerHit = true;
         }

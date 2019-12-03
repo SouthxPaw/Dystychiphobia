@@ -8,8 +8,8 @@ public class Projectile : MonoBehaviour
     public float speed;
     public float distance;
     //variables to control the fire rate
-    private float _canFire = 2.1f;
-    [SerializeField] private float _fireRate = 3f;
+    public float _canFire = 2.1f;
+    public float _fireRate = 6.0f;
 
     [SerializeField] private GameObject _particlePrefab;
 
@@ -56,7 +56,7 @@ public class Projectile : MonoBehaviour
     IEnumerator ParticleDelay()
     {
         anim.SetTrigger("Attack2");
-        if (Time.time >= _canFire)
+        if (Time.time > _canFire)
         {
             fireParticle();
             Debug.Log(Time.time);

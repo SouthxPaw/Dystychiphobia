@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     public CharacterController2D controller;
     public Animator animator;
+    private LevelChanger _resetLevel;
 
     float horizontalMove = 0f;
     public float runSpeed = 40f;
@@ -19,13 +20,19 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        _resetLevel = GameObject.Find("Level_Changer").GetComponent<LevelChanger>();
+
+        if (_resetLevel == null)
+        {
+            Debug.Log("Reset level is null");
+        }
     }
     // Update is called once per frame
     void Update()
     {
         if (_playerDead == false)
         {
-            horizontalMove = Input.GetAxis("Horizontal") * runSpeed;
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
             animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
@@ -33,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 jump = true;
                 animator.SetBool("IsJumping", true);
+
             }
 
             if (Input.GetButtonDown("Crouch"))
@@ -42,6 +50,11 @@ public class PlayerMovement : MonoBehaviour
             else if (Input.GetButtonUp("Crouch"))
             {
                 crouch = false;
+            }
+
+            if (transform.position.y < -5.4)
+            {
+                Damage();
             }
         }
     }
@@ -55,12 +68,12 @@ public class PlayerMovement : MonoBehaviour
     public void OnCrouch(bool isCrouching)
     {
         animator.SetBool("IsCrouching", isCrouching);
-    } 
+    }
 
     void FixedUpdate()
     {
         //Movement    
-        controller.Move(horizontalMove * Time.fixedDeltaTime,crouch,jump);
+        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
     }
 
@@ -73,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator respawnDelay()
     {
-        yield return new WaitForSeconds(3.2f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        yield return new WaitForSeconds(2.7f);
+        _resetLevel.GetComponent<LevelChanger>().FadeToSameLevel();
     }
 }

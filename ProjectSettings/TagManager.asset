@@ -9,6 +9,8 @@ TagManager:
   - Ground
   - Enemy
   - Enemy_Attack_Particle
+  - Turn
+  - End
   layers:
   - Default
   - TransparentFX
@@ -20,8 +22,8 @@ TagManager:
   - 
   - Player
   - Background
-  - 
-  - 
+  - Obstacle
+  - Random
   - 
   - 
   - 
@@ -51,6 +53,9 @@ TagManager:
     locked: 0
   - name: Door
     uniqueID: 1383581399
+    locked: 0
+  - name: Wizard
+    uniqueID: 1317548165
     locked: 0
   - name: Player
     uniqueID: 3844169901

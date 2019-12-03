@@ -6,12 +6,45 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/Menu/Menu.unity
     guid: f55e96a41c751c146b1e50b957d4ad1c
   - enabled: 1
-    path: Assets/Scenes/First Scene.unity
+    path: Assets/Scenes/Levels/First Scene.unity
     guid: f94dccbd6e344224992064eeaeb20201
   - enabled: 1
-    path: Assets/Scenes/Initial Level.unity
-    guid: c48c90f9cb3fa7d458dafebfadb37652
+    path: Assets/Scenes/Levels/Initial Level.unity
+    guid: a797bcf3168744668a4bceda934f9aea
+  - enabled: 1
+    path: Assets/Scenes/Encounters/First Encounter.unity
+    guid: 5ae9cdc149d69c74e9660dd10a84e94a
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level 1.unity
+    guid: ecc099e63469f434ab9f000e392c89dd
+  - enabled: 1
+    path: Assets/Scenes/Encounters/Second Encounter.unity
+    guid: 554ace5a2491c89439f948a5dedc2b91
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level 2.unity
+    guid: e5fc0c409c0f7a945a689c84945671b0
+  - enabled: 1
+    path: Assets/Scenes/Encounters/Third Encounter.unity
+    guid: 4ece1a89caf028c45ad944449b4925c9
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level 3.unity
+    guid: 45f5c5350d9b97740ab9228c262a2bde
+  - enabled: 1
+    path: Assets/Scenes/Encounters/Fourth Encounter.unity
+    guid: 7efcaa472c0a5cc4893f2f86929f672e
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level 4.unity
+    guid: e339fabf4f93c6a4090fa21163e67145
+  - enabled: 1
+    path: Assets/Scenes/Encounters/Fifth Encounter.unity
+    guid: 8a37b42c574093346bf62b2057e8e9ac
+  - enabled: 1
+    path: Assets/Scenes/Levels/Final Level.unity
+    guid: fc985cdd5edda3744a560999257e07ef
+  - enabled: 1
+    path: Assets/Scenes/Encounters/Final Encounter.unity
+    guid: 213b17d6635e20543996672fe9cc430d
   m_configObjects: {}
